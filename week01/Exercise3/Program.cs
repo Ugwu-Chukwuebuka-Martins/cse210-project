@@ -28,7 +28,7 @@ class Program
             {
                   Console.WriteLine("You guessed it right !");
                   Console.WriteLine($"You guuessed {count} times");
-                  Console.Write("Do you want to play again? ");
+                  Console.Write("Do you want to play again? (YES or NO): ");
                   string playAgain = Console.ReadLine();
                   if (playAgain == "YES" || playAgain == "yes")
                   {
@@ -39,6 +39,11 @@ class Program
                   else if (playAgain == "NO" || playAgain == "no")
                   {
                     Console.WriteLine("cSharp I am tired of guessing a number");
+                    break;
+                  }
+                  else
+                  {
+                    Console.WriteLine("Only type yes or no");
                     break;
                   }
             }
