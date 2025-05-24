@@ -4,10 +4,10 @@ public class Entry
    public string _promptText;
    public string _entryText;
 
-   public void Display()
+   public void Display(Entry item)
    {
-      Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
-      Console.WriteLine(_entryText);
+      Console.WriteLine($"Date: {item._date} - Prompt: {item._promptText}");
+      Console.WriteLine(item._entryText);
       Console.WriteLine();
    }
 }

@@ -2,7 +2,7 @@ using System.IO;
 
 public class Journal
 {
-    public List<Entry> _entries;
+    public List<Entry> _entries = [];
     Entry entry1 = new Entry();
 
     public void AddEntry(Entry newEntry)
@@ -14,7 +14,7 @@ public class Journal
     {
        foreach (Entry item in _entries)
        {
-        entry1.Display();
+        entry1.Display(item);
        }
     }
 
