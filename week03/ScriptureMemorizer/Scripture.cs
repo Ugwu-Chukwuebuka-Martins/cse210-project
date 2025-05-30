@@ -12,7 +12,7 @@ public class Scripture
 
     public void HideRandomWords(int number)
     {
-            _words[number] = "____";
+        _words[number] = "____";
     }
 
     public string GetDisplayText()

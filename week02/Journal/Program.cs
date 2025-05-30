@@ -4,14 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-       Entry entry = new Entry();
        PromptGenerator prompt = new PromptGenerator();
        Journal journ = new Journal();
 
        DateTime theCurrentTime = DateTime.Now;
        string dateText = theCurrentTime.ToShortDateString();
        
-       entry._date = dateText;
        
        prompt._prompts = ["What was the most interesting person I interacted with today? ","What was the best part of my day? ",
        "How did I see the hand of the Lord in my life today? ","What was the strongest emotion I felt today? ", 
@@ -28,19 +26,26 @@ class Program
             int select = int.Parse(Console.ReadLine());
             if (select == 1)
             {
+                Entry entry = new Entry();
                 entry._promptText = prompt.GetRandomPrompt();
                 Console.WriteLine(entry._promptText);
                 Console.Write("> ");
                 entry._entryText = Console.ReadLine();
+                entry._date = dateText;
                 journ.AddEntry(entry);
             }
             else if (select == 2)
             {
-                 journ.DisplayAll();
+                {
+                    journ.DisplayAll();
+                }
             }
             else if (select == 3)
             {
-                journ.SaveToFile("journal.ucm");
+                foreach (Entry item in journ._entries)
+                {
+                    journ.SaveToFile("journal.ucm");
+                }
             }
             else if (select == 4)
             {

@@ -8,7 +8,7 @@ class Program
         do
         {
             Random generateRandom = new Random();
-            int magic = generateRandom.Next(1, scripture._words.Count);
+            int magic = generateRandom.Next(0, scripture._words.Count);
             scripture.GetDisplayText();
             scripture.Script();
             Console.WriteLine();
