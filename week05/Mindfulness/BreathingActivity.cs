@@ -31,7 +31,7 @@ public class BreathingActivity
             Console.WriteLine();
         }
         Console.WriteLine();
-        Console.WriteLine("Well Done, Breathing Continues!!!");
+        Console.WriteLine("Well Done!!!");
         activity.DisplayEndingMessage();
         activity.ShowSpinner(8);
     }
