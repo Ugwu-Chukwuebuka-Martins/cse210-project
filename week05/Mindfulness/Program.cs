@@ -40,6 +40,7 @@ class Program
 
             else if (chose == 4)
             {
+                Console.Clear();
                 break;
             }
         }
