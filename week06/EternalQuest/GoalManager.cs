@@ -14,6 +14,7 @@ public class GoalManager
     {
         while(true)
         {
+            Console.WriteLine();
             DisplayPlayerInfo();
             Console.WriteLine();
             print("Menu Options:");
@@ -66,6 +67,7 @@ public class GoalManager
 
     public void ListGoalNames()
     {
+        Console.WriteLine();
         print("The types of Goals are:");
         print(" 1. Simple Goal");
         print(" 2. Eternal Goal");
@@ -74,15 +76,16 @@ public class GoalManager
 
     public void ListGoalDetails()
     {
+        Console.WriteLine();
         for(int i = 0; i<_goals.Count;i++)
         {
             if (_goals[i].isComplete() == true)
             {
-                print($"[X] {_goals[i].GetDetailsString()}");
+                print($"{i+1}. [X] {_goals[i].GetDetailsString()}");
             }
             else
             {
-                print($"[ ] {_goals[i].GetDetailsString()}");
+                print($"{i+1}. [ ] {_goals[i].GetDetailsString()}");
             }
         }
     }
@@ -125,6 +128,7 @@ public class GoalManager
 
     public void RecordEvent()
     {
+        Console.WriteLine();
         int i = 0;
         print("The goals are:");
         foreach (Goal goal in _goals)
